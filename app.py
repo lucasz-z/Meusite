@@ -181,9 +181,11 @@ def main(pagina: ft.Page):
         # Adiciona os componentes na página
         pagina.add(
             ft.Row(
-                [rail,
-                ft.VerticalDivider(width=1),
-                conteudo] if barra_visivel else [botao_menu, conteudo],expand=True
+                # [rail,
+                # # ft.VerticalDivider(width=1), (removido por enquanto)
+                [conteudo],
+                # if barra_visivel else [botao_menu, conteudo], (removido por enquanto)
+                expand=True
             )
         )
         pagina.update()
