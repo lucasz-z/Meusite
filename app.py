@@ -22,7 +22,7 @@ def main(pagina: ft.Page):
     pagina.title = "Consulta de Códigos - Blindagem"
     pagina.horizontal_alignment = ft.CrossAxisAlignment.CENTER
     pagina.vertical_alignment = ft.MainAxisAlignment.CENTER
-    pagina.bgcolor = ft.colors.GREY_50
+    pagina.bgcolor = ft.colors.BLACK
     pagina.expand = True
 
     barra_visivel = False
@@ -118,13 +118,13 @@ def main(pagina: ft.Page):
                             ft.Container(
                                 content=ft.Column([
                                     ft.Row([ft.Icon(ft.icons.CHECK_CIRCLE, color = ft.colors.GREEN), ft.Text(f"Código: {informacao['CÓDIGOS NOVO']}", color=ft.colors.BLACK)]),
-                                    ft.Text(f"Descrição do Código: {informacao['Descrição']}", color=ft.colors.BLACK54),
-                                    ft.Text(f"Blindagem: {informacao['Blindagem']}", color=ft.colors.BLACK54),
-                                    ft.Text(f"Causas BT: {informacao['Causas BT']}", color=ft.colors.BLACK54),
-                                    ft.Text(f"Causas BT e MT: {informacao['Causas BT e MT']}", color=ft.colors.BLACK54),
-                                    ft.Text(f"Codigo Antigo: {informacao['COD Antigo']}", color=ft.colors.BLACK54)
+                                    ft.Text(f"Descrição do Código: {informacao['Descrição']}", color=ft.colors.BLACK87),
+                                    ft.Text(f"Blindagem: {informacao['Blindagem']}", color=ft.colors.BLACK87),
+                                    ft.Text(f"Causas BT: {informacao['Causas BT']}", color=ft.colors.BLACK87),
+                                    ft.Text(f"Causas BT e MT: {informacao['Causas BT e MT']}", color=ft.colors.BLACK87),
+                                    ft.Text(f"Codigo Antigo: {informacao['COD Antigo']}", color=ft.colors.BLACK87)
                                 ]),
-                                bgcolor = ft.colors.WHITE, border = ft.border.all(1, ft.colors.GREEN_ACCENT), padding=15, margin = 10, border_radius = 8, shadow = ft.BoxShadow(blur_radius=5, spread_radius=2, color=ft.colors.BLACK12) 
+                                bgcolor = ft.colors.RED, border = ft.border.all(1, ft.colors.RED_ACCENT), padding=15, margin = 10, border_radius = 10, shadow = ft.BoxShadow(blur_radius=5, spread_radius=2, color=ft.colors.BLACK54) 
                                         
                             )
                         )
@@ -134,7 +134,7 @@ def main(pagina: ft.Page):
                                 content=ft.Row([
                                     ft.Icon(ft.icons.ERROR, color=ft.colors.RED_ACCENT),
                                     ft.Text(f"Código {codigo} não encontrado.", color="red")
-                                ]), border= ft.border.all(1, ft.colors.RED_ACCENT), padding=10, margin=5, border_radius=8, shadow= ft.BoxShadow(blur_radius=5, spread_radius=1)
+                                ]),bgcolor = ft.colors.BLACK12, border= ft.border.all(1, ft.colors.RED_ACCENT), padding=10, margin=5, border_radius=8, shadow= ft.BoxShadow(blur_radius=5, spread_radius=1)
                             )
                         )
                 pagina.update()
@@ -146,9 +146,9 @@ def main(pagina: ft.Page):
             resultado_texto.controls.clear()
             pagina.update()
         
-        botao_limpar = ft.ElevatedButton("Limpar", on_click=limpar_input, icon= ft.icons.CLEAR_ALL, bgcolor=ft.colors.RED_ACCENT_100)
+        botao_limpar = ft.ElevatedButton("Limpar", on_click=limpar_input, icon= ft.icons.CLEAR_ALL, bgcolor=ft.colors.WHITE70, style= ft.ButtonStyle(color=ft.colors.BLACK54))
 
-        botao_consulta = ft.ElevatedButton("Consultar", on_click=consultar_codigo, icon= ft.icons.SEARCH, bgcolor=ft.colors.GREEN_ACCENT)
+        botao_consulta = ft.ElevatedButton("Consultar", on_click=consultar_codigo, icon= ft.icons.SEARCH, bgcolor=ft.colors.GREEN_ACCENT_700, style= ft.ButtonStyle(color=ft.colors.BLACK54))
         
         #atribui a função de susgest
         codigo_input.on_change = sugerir_codigos
