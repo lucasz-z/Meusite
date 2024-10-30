@@ -119,7 +119,7 @@ def main(pagina: ft.Page):
                                 content=ft.Column([
                                     ft.Row([ft.Icon(ft.icons.CHECK_CIRCLE, color = ft.colors.GREEN), ft.Text(f"Código: {informacao['CÓDIGOS NOVO']}", color=ft.colors.BLACK)]),
                                     ft.Text(f"Descrição do Código: {informacao['Descrição']}", color=ft.colors.BLACK87),
-                                    ft.Text(f"Blindagem: {informacao['Blindagem']}", color=ft.colors.BLACK87),
+                                    ft.Text(f"Blindagem *este Código não pode junto com*: {informacao['Blindagem']}", color=ft.colors.BLACK87),
                                     ft.Text(f"Causas BT: {informacao['Causas BT']}", color=ft.colors.BLACK87),
                                     ft.Text(f"Causas BT e MT: {informacao['Causas BT e MT']}", color=ft.colors.BLACK87),
                                     ft.Text(f"Codigo Antigo: {informacao['COD Antigo']}", color=ft.colors.BLACK87)
