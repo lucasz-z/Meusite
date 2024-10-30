@@ -119,7 +119,7 @@ def main(pagina: ft.Page):
                                     ft.Row([ft.Icon(ft.icons.CHECK_CIRCLE, color = ft.colors.GREEN), ft.Text(f"Código: {informacao['CÓDIGOS NOVO']}")]),
                                     ft.Text(f"Descrição do Código: {informacao['Descrição']}"),
                                     ft.Text(f"Blindagem: {informacao['Blindagem']}"),
-                                    ft.Text(f"Causas BT: {informacao["Causas BT"]}"),
+                                    ft.Text(f"Causas BT: {informacao['Causas BT']}"),
                                     ft.Text(f"Causas BT e MT: {informacao['Causas BT e MT']}"),
                                     ft.Text(f"Codigo Antigo: {informacao['COD Antigo']}")
                                 ]),
