@@ -124,7 +124,7 @@ def main(pagina: ft.Page):
                                     ft.Text(f"Causas BT e MT: {informacao['Causas BT e MT']}", color=ft.colors.BLACK87),
                                     ft.Text(f"Codigo Antigo: {informacao['COD Antigo']}", color=ft.colors.BLACK87)
                                 ]),
-                                bgcolor = ft.colors.RED, border = ft.border.all(1, ft.colors.RED_ACCENT), padding=15, margin = 10, border_radius = 10, shadow = ft.BoxShadow(blur_radius=5, spread_radius=2, color=ft.colors.BLACK54) 
+                                bgcolor = ft.colors.WHITE, border = ft.border.all(1, ft.colors.RED_ACCENT), padding=15, margin = 10, border_radius = 10, shadow = ft.BoxShadow(blur_radius=5, spread_radius=2, color=ft.colors.BLACK54) 
                                         
                             )
                         )
