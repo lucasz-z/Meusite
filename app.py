@@ -22,6 +22,7 @@ def main(pagina: ft.Page):
     pagina.title = "Consulta de Códigos - Blindagem"
     pagina.horizontal_alignment = ft.CrossAxisAlignment.CENTER
     pagina.vertical_alignment = ft.MainAxisAlignment.CENTER
+    pagina.bgcolor = ft.colors.WHITE
     pagina.expand = True
 
     barra_visivel = False
