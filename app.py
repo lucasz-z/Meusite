@@ -116,7 +116,7 @@ def main(pagina: ft.Page):
                         resultado_texto.controls.append(
                             ft.Container(
                                 content=ft.Column([
-                                    ft.Row([ft.Icon(ft.icons.CHECK_CIRCLE, color = ft.colors.GREEN), ft.Text(f"Código: {informacao["CÓDIGOS NOVO"]}")]),
+                                    ft.Row([ft.Icon(ft.icons.CHECK_CIRCLE, color = ft.colors.GREEN), ft.Text(f"Código: {informacao['CÓDIGOS NOVO']}")]),
                                     ft.Text(f"Descrição do Código: {informacao['Descrição']}"),
                                     ft.Text(f"Blindagem: {informacao['Blindagem']}"),
                                     ft.Text(f"Causas BT: {informacao["Causas BT"]}"),
