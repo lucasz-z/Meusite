@@ -22,7 +22,7 @@ def main(pagina: ft.Page):
     pagina.title = "Consulta de Códigos - Blindagem"
     pagina.horizontal_alignment = ft.CrossAxisAlignment.CENTER
     pagina.vertical_alignment = ft.MainAxisAlignment.CENTER
-    pagina.bgcolor = ft.colors.WHITE
+    pagina.bgcolor = ft.colors.GREY_50
     pagina.expand = True
 
     barra_visivel = False
@@ -117,14 +117,14 @@ def main(pagina: ft.Page):
                         resultado_texto.controls.append(
                             ft.Container(
                                 content=ft.Column([
-                                    ft.Row([ft.Icon(ft.icons.CHECK_CIRCLE, color = ft.colors.GREEN), ft.Text(f"Código: {informacao['CÓDIGOS NOVO']}")]),
-                                    ft.Text(f"Descrição do Código: {informacao['Descrição']}"),
-                                    ft.Text(f"Blindagem: {informacao['Blindagem']}"),
-                                    ft.Text(f"Causas BT: {informacao['Causas BT']}"),
-                                    ft.Text(f"Causas BT e MT: {informacao['Causas BT e MT']}"),
-                                    ft.Text(f"Codigo Antigo: {informacao['COD Antigo']}")
+                                    ft.Row([ft.Icon(ft.icons.CHECK_CIRCLE, color = ft.colors.GREEN), ft.Text(f"Código: {informacao['CÓDIGOS NOVO']}", color=ft.colors.BLACK)]),
+                                    ft.Text(f"Descrição do Código: {informacao['Descrição']}", color=ft.colors.BLACK54),
+                                    ft.Text(f"Blindagem: {informacao['Blindagem']}", color=ft.colors.BLACK54),
+                                    ft.Text(f"Causas BT: {informacao['Causas BT']}", color=ft.colors.BLACK54),
+                                    ft.Text(f"Causas BT e MT: {informacao['Causas BT e MT']}", color=ft.colors.BLACK54),
+                                    ft.Text(f"Codigo Antigo: {informacao['COD Antigo']}", color=ft.colors.BLACK54)
                                 ]),
-                                bgcolor = ft.colors.WHITE, border = ft.border.all(1, ft.colors.GREEN_ACCENT), padding=10, margin = 5, border_radius = 8, shadow = ft.BoxShadow(blur_radius=5, spread_radius=1)
+                                bgcolor = ft.colors.WHITE, border = ft.border.all(1, ft.colors.GREEN_ACCENT), padding=15, margin = 10, border_radius = 8, shadow = ft.BoxShadow(blur_radius=5, spread_radius=2, color=ft.colors.BLACK12) 
                                         
                             )
                         )
